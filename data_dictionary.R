@@ -17,7 +17,7 @@ mean1<-function(x){
 max1<-function(x){
   if(is.numeric(x)==TRUE){
     m<-max(x,na.rm=TRUE)
-  }else{m<-max(as.character(x),na.rm=TRUE)
+  }else{m<-''
   }
   return(m)}
 
@@ -178,7 +178,7 @@ if(!is.null(nrow(var.format))) {
     pp90<-y[,sapply(.SD,p90),]
     pp95<-y[,sapply(.SD,p95),]
     pp99<-y[,sapply(.SD,p99),]
-    mx<-y[,sapply(.SD,max),]
+    mx<-y[,sapply(.SD,max1),]
     sm1<-y[,sapply(.SD,sum1),]
     vr1<-y[,sapply(.SD,var1),]
     sk1<-y[,sapply(.SD,skew1),]
