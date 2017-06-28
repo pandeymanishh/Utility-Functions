@@ -210,7 +210,8 @@ if(!is.null(nrow(var.format))) {
                                ,"P90"=pp90
                                ,"P95"=pp95
                                ,"P99"=pp99
-                               ,"Maximum"=mx))
+                               ,"Maximum"=mx)
+			,stringsAsFactors=FALSE)
     
     out.2<-with(out.2,out.2[order(Variable_Type,ord.1),])
     
